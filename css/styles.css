@@ -1,0 +1,96 @@
+html {
+  font-size: 62.5%;
+}
+
+ul {
+  font-size: 18px;
+  color: blue;
+}
+
+ol {
+  list-style-type: decimal;
+  font-size: 16px;
+  color: blue;
+}
+ol ol {
+  list-style-type: lower-alpha;
+}
+ol ol ul {
+  list-style-type: circle;
+}
+
+.alignMiddle {
+  vertical-align: middle;
+}
+
+/* Mixin itself  */
+/* Usage as a mixin  */
+.clearAll::after {
+  display: block;
+  content: "";
+  clear: both;
+}
+
+.btnRow, .mainContainer {
+  margin: 0px 100px;
+  padding: 5px;
+  border-style: groove;
+  border-color: blue;
+  border-width: 5px;
+}
+
+.btnRow {
+  border-color: green;
+}
+
+.btn {
+  width: 300px;
+}
+
+table {
+  width: 100%;
+  font-size: 18px;
+}
+
+caption {
+  caption-side: top;
+  font-size: 20px;
+  color: blue;
+  font-weight: bold;
+  text-align: left;
+}
+
+tr:nth-child(even) {
+  background: #93CCEA;
+}
+
+tr:nth-child(odd) {
+  background: #C8C8CD;
+}
+
+/*@media screen and (min-width: 480px) and (max-width : 780px){      (min-width : 781px) and     */
+@media screen and (max-width: 480px) {
+  .btn {
+    overflow: hidden;
+    background-color: pink;
+    margin: 3px 20px;
+    width: 100%;
+  }
+}
+@media screen and (min-width: 481px) and (max-width: 780px) {
+  .btn {
+    overflow: hidden;
+    background-color: yellow;
+    margin: 3px 30px;
+    width: 100px;
+  }
+}
+@media screen and (min-width: 781px) and (max-width: 1024px) {
+  .btn {
+    overflow: hidden;
+    width: 200px;
+    background-color: silver;
+  }
+}
+
+/*# sourceMappingURL=styles.css.map */

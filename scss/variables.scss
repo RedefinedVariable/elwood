@@ -1,0 +1,113 @@
+$colorBlue: blue;
+$colorLtBlue:#93CCEA;
+$colorGreen: green;
+
+$smallFont:16px;
+$largeFont:18px;
+$giantFont:20px;
+
+html{
+	font-size:62.5%;
+}
+
+ul {
+    font-size:$largeFont;
+    color: $colorBlue;
+}
+
+ol {
+	list-style-type: decimal;
+    font-size: $smallFont;
+    color: $colorBlue;
+   ol{list-style-type: lower-alpha;
+      ul{list-style-type: circle;}
+      }
+}
+
+.alignMiddle{
+	vertical-align: middle;
+}
+
+/* Mixin itself  */
+@mixin clearfix() {
+  &::after {
+    display: block;
+    content: "";
+    clear: both;
+  }
+}
+
+/* Usage as a mixin  */
+.clearAll {
+  @include clearfix;
+}
+
+%containers-shared {
+	margin:0px 100px;
+	padding:5px;
+	border-style: groove;
+    border-color: $colorBlue;
+    border-width: 5px;
+}
+
+.mainContainer {
+  @extend %containers-shared;
+}
+
+.btnRow{
+  @extend %containers-shared;
+  border-color: $colorGreen;
+}
+
+.btn{
+	width:300px;
+}
+
+table{
+	width:100%;
+	font-size: $largeFont;
+}
+
+caption{
+	caption-side:top;
+	font-size:$giantFont;
+    color: $colorBlue;
+    font-weight: bold;
+    text-align: left;
+}
+
+tr:nth-child(even) {background: #93CCEA;}
+tr:nth-child(odd) {background: #C8C8CD;}
+
+
+/*@media screen and (min-width: 480px) and (max-width : 780px){      (min-width : 781px) and     */
+
+@media screen and (max-width : 480px){
+.btn{
+	overflow: hidden;
+	background-color: pink;
+	margin:3px 20px;
+	width:100%;
+	}      
+}
+
+@media screen and (min-width : 481px) and (max-width : 780px){
+.btn{
+	overflow: hidden;
+	background-color: yellow;
+	margin:3px 30px;
+	width:100px;
+	}      
+}
+
+@media screen and (min-width : 781px) and (max-width : 1024px) {
+.btn{
+	overflow: hidden;
+	width:200px;
+	background-color: silver;
+}
+}
+
+
+
+
