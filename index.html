@@ -3,19 +3,27 @@
     <head>
         <title>To Do-s for P0</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-        <link rel="stylesheet" href="css/styles.css">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+        <link rel="stylesheet" href="css/styles.css?1=2">
+
     </head>
     <body>
     	<h1>   <img src= "images/rtgold1-tran.gif" title="RedesDragon" alt="GoldDragon">RedefinedVariable's Project 0</h1>
     	     
         <div class="btnRow">
-			<button type="button" id="btn1" class="btn btn-outline-primary" onclick="window.location.href='p0-lists.html'" data-toggle="tooltip" data-placement="top" title="Lists in Lists">Nested List</button>
-            <button type="button" id="btn2" class="btn btn-outline-primary" onclick="window.location.href='p0-table.html'" data-toggle="tooltip" data-placement="top" title="Tables are fun">Table</button>
+        	<button type="button" id="btn0" class="btn btn-outline-primary" onclick="window.location.href='index.html'" data-toggle="tooltip" data-placement="bottom" title="You are Home">Home</button>
+			<button type="button" id="btn1" class="btn btn-outline-primary" onclick="window.location.href='p0-lists.html'" data-toggle="tooltip" data-placement="bottom" title="Go to list example">Nested List</button>
+            <button type="button" id="btn2" class="btn btn-outline-primary" onclick="window.location.href='p0-table.html'" data-toggle="tooltip" data-placement="bottom" title="Go to table example">Table</button>
+            <button type="button" id="btn3" class="btn btn-outline-primary" onclick="window.location.href='p0-column.html'" data-toggle="tooltip" data-placement="bottom" title="Go to grid example">Grid</button>
 		</div>
 		<div class="clearAll"></div>
     	<div class="mainContainer">
-    	<h2>Project Specs</h2>
+    	<h2>Project Specs for CS50-W</h2>
+    	<p><span id="addNote">NOTE:</span>&emsp;In the div below, the viewport size is displayed. 
+    		Refresh the page after resizing the page to view the new size. This has been left visible to aid in testing the media queries.
+    		contained in some of this site's pages.
+    	</p>
+    	<div id="lblViewportTop">xyz</div>
 	    	<ul>
 				<li>Your website must contain at least four different .html pages, and it should be possible to get from any page on your website to any other page by following one or more hyperlinks.</li>
 				<li>Your website must include at least one lis t (ordered or unordered), at least one table, and at least one image.</li>
@@ -26,8 +34,26 @@
 				<li>Your stylesheets must use at least one SCSS variable, at least one example of SCSS nesting, and at least one use of SCSS inheritance.</li>
 				<li>In README.md, include a short writeup describing your project, what’s contained in each file, and (optionally) any other additional information the staff should know about your project.</li>
 	        </ul>
+	        <div class="clearAll"></div>
+	        <div id="cRight">Copyright &copy; 2018 by Gloria Binette, aka RedefinedVariable </div>
         </div>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<script>
+	        $(document).ready(function () {
+	            if ($('#JSEnabled').length) $('#JSEnabled').html('Y');
+	            resizeHandler();
+	        });
 
-
+	        function resizeHandler() {
+	            var w = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+	            var h = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight;
+	            $('#lblViewportTop').html( "Viewport size: " + w + 'x' + h );
+	        }
+$(document).ready(function(){
+    $('[data-toggle="tooltip"]').tooltip();   
+});
+</script>
     </body>
 </html>

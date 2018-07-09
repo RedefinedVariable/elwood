@@ -2,6 +2,16 @@ html {
   font-size: 62.5%;
 }
 
+p {
+  font-size: 18px;
+  color: #93CCEA;
+}
+
+p #addNote {
+  font-size: 20px;
+  color: blue;
+}
+
 ul {
   font-size: 18px;
   color: blue;
@@ -31,7 +41,7 @@ ol ol ul {
   clear: both;
 }
 
-.btnRow, .mainContainer {
+.btnRowRes, .btnRow, .mainContainer {
   margin: 0px 100px;
   padding: 5px;
   border-style: groove;
@@ -43,8 +53,35 @@ ol ol ul {
   border-color: green;
 }
 
+div #cRight {
+  color: pink;
+  text-align: center;
+}
+
+.ColHeading {
+  font-size: 18px;
+  color: blue;
+}
+
+.RowHeading {
+  font-size: 20px;
+  font-weight: bold;
+  color: blue;
+  text-align: center;
+}
+
+.btnRowRes {
+  border-color: green;
+  margin: 0;
+}
+
 .btn {
   width: 300px;
+}
+
+.btnResponsive {
+  overflow: hidden;
+  width: 150px;
 }
 
 table {
@@ -68,28 +105,166 @@ tr:nth-child(odd) {
   background: #C8C8CD;
 }
 
-/*@media screen and (min-width: 480px) and (max-width : 780px){      (min-width : 781px) and     */
+.evenRow {
+  margin: 0px 5px;
+  background-color: #93CCEA;
+}
+
+.oddRow {
+  margin: 0px 5px;
+  background-color: #C8C8CD;
+}
+
 @media screen and (max-width: 480px) {
   .btn {
     overflow: hidden;
     background-color: pink;
-    margin: 3px 20px;
+    margin: 3px 2px;
     width: 100%;
   }
+
+  .btnResponsive {
+    overflow: hidden;
+    background-color: pink;
+    margin: 3px 2px;
+    width: 100%;
+  }
+
+  div #StateName {
+    visibility: hidden;
+  }
+
+  div #StateName:before {
+    content: "Name";
+    visibility: visible;
+  }
+
+  div #StateAbbrev {
+    visibility: hidden;
+  }
+
+  div #StateAbbrev:before {
+    content: "Abbr";
+    visibility: visible;
+  }
+
+  div #StateCapital {
+    visibility: hidden;
+  }
+
+  div #StateCapital:before {
+    content: "Capital";
+    visibility: visible;
+  }
+
+  div #StatePopul {
+    visibility: hidden;
+  }
+
+  div #StatePopul:before {
+    content: "Pop";
+    visibility: visible;
+  }
+
+  .ColHeading {
+    height: 20px;
+    font-size: 14px;
+    font-weight: normal;
+  }
 }
-@media screen and (min-width: 481px) and (max-width: 780px) {
+@media screen and (min-width: 481px) and (max-width: 889px) {
   .btn {
     overflow: hidden;
     background-color: yellow;
+    color: black;
     margin: 3px 30px;
     width: 100px;
   }
+
+  .mainContainer {
+    padding: 0 20px;
+  }
+
+  .btnResponsive {
+    overflow: hidden;
+    background-color: teal;
+    margin: 3px 20px;
+    width: 100%;
+  }
+
+  div #StateName {
+    visibility: hidden;
+  }
+
+  div #StateName:before {
+    content: "Name";
+    visibility: visible;
+  }
+
+  div #StateAbbrev {
+    visibility: hidden;
+  }
+
+  div #StateAbbrev:before {
+    content: "Abbr";
+    visibility: visible;
+  }
+
+  div #StateCapital {
+    visibility: hidden;
+  }
+
+  div #StateCapital:before {
+    content: "Capital";
+    visibility: visible;
+  }
+
+  div #StatePopul {
+    visibility: hidden;
+  }
+
+  div #StatePopul:before {
+    content: "Pop";
+    visibility: visible;
+  }
+
+  .ColHeading {
+    height: 20px;
+    font-size: 14px;
+    font-weight: normal;
+  }
 }
-@media screen and (min-width: 781px) and (max-width: 1024px) {
+@media screen and (min-width: 890px) and (max-width: 1020px) {
   .btn {
     overflow: hidden;
     width: 200px;
     background-color: silver;
+  }
+
+  .btnResponsive {
+    overflow: hidden;
+    background-color: purple;
+    width: 125px;
+  }
+
+  .ColHeading {
+    height: 20px;
+    font-size: 14px;
+    font-weight: normal;
+  }
+}
+@media screen and (min-width: 1020px) {
+  .btn {
+    overflow: hidden;
+    width: 200px;
+    background-color: silver;
+  }
+
+  .btnResponsive {
+    overflow: hidden;
+    background-color: silver;
+    width: 125px;
+    margin: 0 20;
   }
 }
 

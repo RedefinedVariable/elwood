@@ -1,75 +1,353 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>CS50-W P0-Table</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-        <link rel="stylesheet" href="css/styles.css">
-    </head>
-    <body>
-    	<h1><img src= "images/rtgold1-tran.gif" title="RedesDragon" alt="GoldDragon">RedefinedVariable's Project 0</h1>
-    	<div class="mainContainer">
-   
-		<table> <caption>State Data Table</caption>
-			<tr><th>State Full Name</th><th>State Abbreviation</th><th>Capital</th><th>State Population</th></tr>
-			<tr><td>Alabama		 	</td><td>AL</td><td>Montgomery     </td><td>4,858,979 </td></tr>        
-			<tr><td>Alaska		 	</td><td>AK</td><td>Juneau         </td><td>738,432   </td></tr> 
-			<tr><td>Arizona		 	</td><td>AZ</td><td>Phoenix        </td><td>6,828,065 </td></tr> 
-			<tr><td>Arkansas	 	</td><td>AR</td><td>Little Rock    </td><td>2,978,204 </td></tr> 
-			<tr><td>California	 	</td><td>CA</td><td>Sacramento     </td><td>39,144,818</td></tr> 
-			<tr><td>Colorado	 	</td><td>CO</td><td>Denver         </td><td>5,456,574 </td></tr> 
-			<tr><td>Connecticut	 	</td><td>CT</td><td>Hartford       </td><td>3,590,886 </td></tr> 
-			<tr><td>Delaware	 	</td><td>DE</td><td>Dover          </td><td>945,934   </td></tr> 
-			<tr><td>Florida		 	</td><td>FL</td><td>Tallahassee    </td><td>20,271,272</td></tr> 
-			<tr><td>Georgia		 	</td><td>GA</td><td>Atlanta        </td><td>10,214,860</td></tr> 
-			<tr><td>Hawaii		 	</td><td>HI</td><td>Honolulu       </td><td>1,431,603 </td></tr> 
-			<tr><td>Idaho		 	</td><td>ID</td><td>Boise          </td><td>1,654,930 </td></tr> 
-			<tr><td>Illinois	 	</td><td>IL</td><td>Springfield    </td><td>12,859,995</td></tr> 
-			<tr><td>Indiana		 	</td><td>IN</td><td>Indianapolis   </td><td>6,619,680 </td></tr> 
-			<tr><td>Iowa	     	</td><td>IA</td><td>DesMoines      </td><td>3,123,899 </td></tr> 
-			<tr><td>Kansas		 	</td><td>KS</td><td>Topeka         </td><td>2,911,641 </td></tr> 
-			<tr><td>Kentucky		</td><td>KY</td><td>Frankfort      </td><td>4,425,092 </td></tr> 
-			<tr><td>Louisiana		</td><td>LA</td><td>Baton Rouge    </td><td>4,670,724 </td></tr> 
-			<tr><td>Maine			</td><td>ME</td><td>Augusta        </td><td>1,329,328 </td></tr> 
-			<tr><td>Maryland		</td><td>MD</td><td>Annapolis      </td><td>6,006,401 </td></tr> 
-			<tr><td>Massachusetts	</td><td>MA</td><td>Boston         </td><td>6,794,422 </td></tr> 
-			<tr><td>Michigan		</td><td>MI</td><td>Lansing        </td><td>9,922,576 </td></tr> 
-			<tr><td>Minnesota		</td><td>MN</td><td>St. Paul       </td><td>5,489,594 </td></tr> 
-			<tr><td>Mississippi	 	</td><td>MS</td><td>Jackson        </td><td>2,992,333 </td></tr> 
-			<tr><td>Missouri		</td><td>MO</td><td>Jefferson City </td><td>6,083,672 </td></tr> 
-			<tr><td>Montana		 	</td><td>MT</td><td>Helena         </td><td>1,032,949 </td></tr> 
-			<tr><td>Nebraska		</td><td>NE</td><td>Lincoln        </td><td>1,896,190 </td></tr> 
-			<tr><td>Nevada		 	</td><td>NV</td><td>Carson City    </td><td>2,890,845 </td></tr> 
-			<tr><td>New Hampshire   </td><td>NH</td><td>Concord        </td><td>1,330,608 </td></tr> 
-			<tr><td>New Jersey	 	</td><td>NJ</td><td>Trenton        </td><td>8,958,013 </td></tr> 
-			<tr><td>New Mexico	 	</td><td>MN</td><td>Santa Fe       </td><td>2,085,109 </td></tr> 
-			<tr><td>New York		</td><td>NY</td><td>Albany         </td><td>19,795,791</td></tr> 
-			<tr><td>North Carolina 	</td><td>NC</td><td>Raleigh        </td><td>10,042,802</td></tr> 
-			<tr><td>North Dakota	</td><td>ND</td><td>Bismarck       </td><td>756,927   </td></tr> 
-			<tr><td>Ohio			</td><td>OH</td><td>Columbus       </td><td>11,613,423</td></tr> 
-			<tr><td>Oklahoma		</td><td>OK</td><td>Oklahoma City  </td><td>3,911,338 </td></tr> 
-			<tr><td>Oregon		 	</td><td>OR</td><td>Salem          </td><td>4,028,977 </td></tr> 
-			<tr><td>Pennsylvania	</td><td>PA</td><td>Harrisburg     </td><td>12,802,503</td></tr> 
-			<tr><td>Rhode Island	</td><td>RI</td><td>Providence     </td><td>1,056,298 </td></tr> 
-			<tr><td>South Carolina 	</td><td>SC</td><td>Columbia       </td><td>4,896,146 </td></tr> 
-			<tr><td>South Dakota	</td><td>SD</td><td>Pierre         </td><td>858,469   </td></tr> 
-			<tr><td>Tennesseee		</td><td>TN</td><td>Nashville      </td><td>6,600,299 </td></tr> 
-			<tr><td>Texas			</td><td>TX</td><td>Austin         </td><td>27,469,114</td></tr> 
-			<tr><td>Utah			</td><td>UT</td><td>Salt Lake City </td><td>2,995,919 </td></tr> 
-			<tr><td>Vermont		 	</td><td>VT</td><td>Montpelier     </td><td>626,042   </td></tr> 
-			<tr><td>Virginia		</td><td>VA</td><td>Richmond       </td><td>8,382,993 </td></tr> 
-			<tr><td>Washington	 	</td><td>WA</td><td>Olympia        </td><td>7,170,351 </td></tr> 
-			<tr><td>West Virginia	</td><td>WV</td><td>Charleston     </td><td>1,844,128 </td></tr> 
-			<tr><td>Wisconsin		</td><td>WI</td><td>Madison        </td><td>5,771,337 </td></tr> 
-			<tr><td>Wyoming		 	</td><td>WY</td><td>Cheyenne       </td><td>586,107   </td></tr> 
-		</table>
-		</div>
-        <div class="clearAll"></div>
-        <div class="btnRow">
-        	<button type="button" id="btn0" class="btn btn-primary" onclick="window.location.href='index.html'">Home</button>
-			<button type="button" id="btn1" class="btn btn-primary" onclick="window.location.href='p0-lists.html'">Nested List</button>
-            <button type="button" id="btn2" class="btn btn-primary" onclick="window.location.href='p0-table.html'">Table</button>
-		</div>
+	<head>
+		<title>CS50-W P0-Table</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+		<link rel="stylesheet" href="css/styles.css">
+	</head>
+	<body>
+		<h1>
+		<img src= "images/rtgold1-tran.gif" title="RedesDragon" alt="GoldDragon">RedefinedVariable's Project 0</h1>
 
-    </body>
+		<div class="btnRow">
+			<button type="button" id="btn0" class="btn btn-outline-primary" onclick="window.location.href='index.html'" data-toggle="tooltip" data-placement="bottom" title="Go home">Home</button>
+			<button type="button" id="btn1" class="btn btn-outline-primary" onclick="window.location.href='p0-lists.html'" data-toggle="tooltip" data-placement="bottom" title="Go to list example">Nested List</button>
+			<button type="button" id="btn2" class="btn btn-outline-primary" onclick="window.location.href='p0-table.html'" data-toggle="tooltip" data-placement="bottom" title="You are here">Table</button>
+			<button type="button" id="btn3" class="btn btn-outline-primary" onclick="window.location.href='p0-column.html'" data-toggle="tooltip" data-placement="bottom" title="Go to grid example">Grid</button>
+		</div>
+		<div class="clearAll"></div>
+
+		<div class="mainContainer">
+
+			<table>
+				<caption>State Data Table Format</caption>
+				<tr>
+					<th>State Full Name</th>
+					<th>State Abbreviation</th>
+					<th>Capital</th>
+					<th>State Population</th>
+				</tr>
+				<tr>
+					<td>Alabama		 	</td>
+					<td>AL</td>
+					<td>Montgomery     </td>
+					<td>4,858,979 </td>
+				</tr>
+				<tr>
+					<td>Alaska		 	</td>
+					<td>AK</td>
+					<td>Juneau         </td>
+					<td>738,432   </td>
+				</tr>
+				<tr>
+					<td>Arizona		 	</td>
+					<td>AZ</td>
+					<td>Phoenix        </td>
+					<td>6,828,065 </td>
+				</tr>
+				<tr>
+					<td>Arkansas	 	</td>
+					<td>AR</td>
+					<td>Little Rock    </td>
+					<td>2,978,204 </td>
+				</tr>
+				<tr>
+					<td>California	 	</td>
+					<td>CA</td>
+					<td>Sacramento     </td>
+					<td>39,144,818</td>
+				</tr>
+				<tr>
+					<td>Colorado	 	</td>
+					<td>CO</td>
+					<td>Denver         </td>
+					<td>5,456,574 </td>
+				</tr>
+				<tr>
+					<td>Connecticut	 	</td>
+					<td>CT</td>
+					<td>Hartford       </td>
+					<td>3,590,886 </td>
+				</tr>
+				<tr>
+					<td>Delaware	 	</td>
+					<td>DE</td>
+					<td>Dover          </td>
+					<td>945,934   </td>
+				</tr>
+				<tr>
+					<td>Florida		 	</td>
+					<td>FL</td>
+					<td>Tallahassee    </td>
+					<td>20,271,272</td>
+				</tr>
+				<tr>
+					<td>Georgia		 	</td>
+					<td>GA</td>
+					<td>Atlanta        </td>
+					<td>10,214,860</td>
+				</tr>
+				<tr>
+					<td>Hawaii		 	</td>
+					<td>HI</td>
+					<td>Honolulu       </td>
+					<td>1,431,603 </td>
+				</tr>
+				<tr>
+					<td>Idaho		 	</td>
+					<td>ID</td>
+					<td>Boise          </td>
+					<td>1,654,930 </td>
+				</tr>
+				<tr>
+					<td>Illinois	 	</td>
+					<td>IL</td>
+					<td>Springfield    </td>
+					<td>12,859,995</td>
+				</tr>
+				<tr>
+					<td>Indiana		 	</td>
+					<td>IN</td>
+					<td>Indianapolis   </td>
+					<td>6,619,680 </td>
+				</tr>
+				<tr>
+					<td>Iowa	     	</td>
+					<td>IA</td>
+					<td>DesMoines      </td>
+					<td>3,123,899 </td>
+				</tr>
+				<tr>
+					<td>Kansas		 	</td>
+					<td>KS</td>
+					<td>Topeka         </td>
+					<td>2,911,641 </td>
+				</tr>
+				<tr>
+					<td>Kentucky		</td>
+					<td>KY</td>
+					<td>Frankfort      </td>
+					<td>4,425,092 </td>
+				</tr>
+				<tr>
+					<td>Louisiana		</td>
+					<td>LA</td>
+					<td>Baton Rouge    </td>
+					<td>4,670,724 </td>
+				</tr>
+				<tr>
+					<td>Maine			</td>
+					<td>ME</td>
+					<td>Augusta        </td>
+					<td>1,329,328 </td>
+				</tr>
+				<tr>
+					<td>Maryland		</td>
+					<td>MD</td>
+					<td>Annapolis      </td>
+					<td>6,006,401 </td>
+				</tr>
+				<tr>
+					<td>Massachusetts	</td>
+					<td>MA</td>
+					<td>Boston         </td>
+					<td>6,794,422 </td>
+				</tr>
+				<tr>
+					<td>Michigan		</td>
+					<td>MI</td>
+					<td>Lansing        </td>
+					<td>9,922,576 </td>
+				</tr>
+				<tr>
+					<td>Minnesota		</td>
+					<td>MN</td>
+					<td>St. Paul       </td>
+					<td>5,489,594 </td>
+				</tr>
+				<tr>
+					<td>Mississippi	 	</td>
+					<td>MS</td>
+					<td>Jackson        </td>
+					<td>2,992,333 </td>
+				</tr>
+				<tr>
+					<td>Missouri		</td>
+					<td>MO</td>
+					<td>Jefferson City </td>
+					<td>6,083,672 </td>
+				</tr>
+				<tr>
+					<td>Montana		 	</td>
+					<td>MT</td>
+					<td>Helena         </td>
+					<td>1,032,949 </td>
+				</tr>
+				<tr>
+					<td>Nebraska		</td>
+					<td>NE</td>
+					<td>Lincoln        </td>
+					<td>1,896,190 </td>
+				</tr>
+				<tr>
+					<td>Nevada		 	</td>
+					<td>NV</td>
+					<td>Carson City    </td>
+					<td>2,890,845 </td>
+				</tr>
+				<tr>
+					<td>New Hampshire   </td>
+					<td>NH</td>
+					<td>Concord        </td>
+					<td>1,330,608 </td>
+				</tr>
+				<tr>
+					<td>New Jersey	 	</td>
+					<td>NJ</td>
+					<td>Trenton        </td>
+					<td>8,958,013 </td>
+				</tr>
+				<tr>
+					<td>New Mexico	 	</td>
+					<td>MN</td>
+					<td>Santa Fe       </td>
+					<td>2,085,109 </td>
+				</tr>
+				<tr>
+					<td>New York		</td>
+					<td>NY</td>
+					<td>Albany         </td>
+					<td>19,795,791</td>
+				</tr>
+				<tr>
+					<td>North Carolina 	</td>
+					<td>NC</td>
+					<td>Raleigh        </td>
+					<td>10,042,802</td>
+				</tr>
+				<tr>
+					<td>North Dakota	</td>
+					<td>ND</td>
+					<td>Bismarck       </td>
+					<td>756,927   </td>
+				</tr>
+				<tr>
+					<td>Ohio			</td>
+					<td>OH</td>
+					<td>Columbus       </td>
+					<td>11,613,423</td>
+				</tr>
+				<tr>
+					<td>Oklahoma		</td>
+					<td>OK</td>
+					<td>Oklahoma City  </td>
+					<td>3,911,338 </td>
+				</tr>
+				<tr>
+					<td>Oregon		 	</td>
+					<td>OR</td>
+					<td>Salem          </td>
+					<td>4,028,977 </td>
+				</tr>
+				<tr>
+					<td>Pennsylvania	</td>
+					<td>PA</td>
+					<td>Harrisburg     </td>
+					<td>12,802,503</td>
+				</tr>
+				<tr>
+					<td>Rhode Island	</td>
+					<td>RI</td>
+					<td>Providence     </td>
+					<td>1,056,298 </td>
+				</tr>
+				<tr>
+					<td>South Carolina 	</td>
+					<td>SC</td>
+					<td>Columbia       </td>
+					<td>4,896,146 </td>
+				</tr>
+				<tr>
+					<td>South Dakota	</td>
+					<td>SD</td>
+					<td>Pierre         </td>
+					<td>858,469   </td>
+				</tr>
+				<tr>
+					<td>Tennesseee		</td>
+					<td>TN</td>
+					<td>Nashville      </td>
+					<td>6,600,299 </td>
+				</tr>
+				<tr>
+					<td>Texas			</td>
+					<td>TX</td>
+					<td>Austin         </td>
+					<td>27,469,114</td>
+				</tr>
+				<tr>
+					<td>Utah			</td>
+					<td>UT</td>
+					<td>Salt Lake City </td>
+					<td>2,995,919 </td>
+				</tr>
+				<tr>
+					<td>Vermont		 	</td>
+					<td>VT</td>
+					<td>Montpelier     </td>
+					<td>626,042   </td>
+				</tr>
+				<tr>
+					<td>Virginia		</td>
+					<td>VA</td>
+					<td>Richmond       </td>
+					<td>8,382,993 </td>
+				</tr>
+				<tr>
+					<td>Washington	 	</td>
+					<td>WA</td>
+					<td>Olympia        </td>
+					<td>7,170,351 </td>
+				</tr>
+				<tr>
+					<td>West Virginia	</td>
+					<td>WV</td>
+					<td>Charleston     </td>
+					<td>1,844,128 </td>
+				</tr>
+				<tr>
+					<td>Wisconsin		</td>
+					<td>WI</td>
+					<td>Madison        </td>
+					<td>5,771,337 </td>
+				</tr>
+				<tr>
+					<td>Wyoming		 	</td>
+					<td>WY</td>
+					<td>Cheyenne       </td>
+					<td>586,107   </td>
+				</tr>
+			</table>
+			<div id="cRight">Copyright &copy; 2018 by Gloria Binette, aka RedefinedVariable </div>
+		</div>
+		<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+		<script>
+			$(document).ready(function () {
+				if ($('#JSEnabled').length) $('#JSEnabled').html('Y');
+				resizeHandler();
+			});
+
+			function resizeHandler() {
+				var w = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+				var h = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight;
+				$('#lblViewportTop').html( "Viewport size: " + w + 'x' + h + " &emsp; If you resize the browser window, refresh the page to update the size");
+			}
+			$(document).ready(function(){
+				$('[data-toggle="tooltip"]').tooltip();
+			});
+		</script>
+	</body>
 </html>
