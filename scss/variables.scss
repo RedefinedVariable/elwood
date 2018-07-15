@@ -1,12 +1,21 @@
 $colorBlack: black;
 $colorBlue: blue;
 $colorLtBlue:#93CCEA;
+$colorltSteelBlue:lightsteelblue;
+$colorLtSkyBlue:lightskyblue;
 $colorGreen: green; 
 $colorPink:pink;
+$colorRed:red;
 $colorRowEven:#93CCEA;
 $colorRowOdd:#C8C8CD;
 $colorWhite: white;
 $colorYellow:yellow;
+$colorSilver:silver;
+$colorLtGray:lightgray;
+$colorDkGray:darkgray;
+$colorGray:gray;
+
+
 
 $tinyFont:14px;
 $smallFont:16px;
@@ -15,6 +24,7 @@ $giantFont:20px;
 
 html{
 	font-size:62.5%;
+	
 }
 
 p{font-size:$largeFont;
@@ -25,6 +35,10 @@ p{#addNote{font-size:$giantFont;
 }
 }
 
+p::selection{color:$colorRed;
+	background-color:$colorSilver;
+	}
+	
 ul {
     font-size:$largeFont;
     color: $colorBlue;
@@ -42,6 +56,13 @@ ol {
 .alignMiddle{
 	vertical-align: middle;
 }
+
+#lnkHome:hover{background-color:$colorLtGray;  color:$colorBlack;} 
+#lnkList:hover{background-color:$colorSilver;  color:$colorBlack;}
+#lnkTable:hover{background-color:$colorDkGray; color:$colorWhite;}
+#lnkGrid:hover{background-color:$colorGray;   color:$colorWhite;}
+
+
 
 /* Mixin itself  */
 @mixin clearfix() {
@@ -61,8 +82,8 @@ ol {
 	margin:0px 100px;
 	padding:5px;
 	border-style: groove;
-    border-color: $colorBlue;
-    border-width: 5px;
+  border-color: $colorBlue;
+  border-width: 5px;
 }
 
 .mainContainer {
@@ -74,6 +95,16 @@ ol {
   @extend %containers-shared;
   border-color: $colorGreen;
 }
+
+.navItem{ 
+	@extend %containers-shared;
+  width:100px;
+  display:inline-block;
+  margin:5px 5px;
+	padding:2px;
+	Text-align:center;
+	border-width:1px;
+	}
 
 div{#cRight{color:$colorPink;
 	text-align:center;}
@@ -114,9 +145,9 @@ table{
 caption{
 	caption-side:top;
 	font-size:$giantFont;
-    color: $colorBlue;
-    font-weight: bold;
-    text-align: left;
+  color: $colorBlue;
+  font-weight: bold;
+  text-align: left;
 }
 
 tr:nth-child(even) {background:$colorRowEven;}
@@ -125,53 +156,21 @@ tr:nth-child(odd) {background: $colorRowOdd;}
 .evenRow {  margin:0px 5px; background-color: $colorRowEven;} 
 .oddRow { margin:0px 5px; background-color: $colorRowOdd;}  
 
-@media screen and (max-width : 480px){
+@media (max-width : 480px){
 	.btn{
 		overflow: hidden;
 		background-color: $colorPink;
 		margin:3px 2px;
 		width:100%;
 		}  
-	.btnResponsive {
+ 
+ 	.btnResponsive {
 		overflow: hidden;
 		background-color: $colorPink;
 		margin:3px 2px;
 		width:100%;   
 	}
 
-
-	div {#StateName { visibility:hidden;} 
-	}  
-	div {#StateName:before {
-		content: "Name";
-		visibility:visible
-		}
-	}
-
-	div {#StateAbbrev{ visibility:hidden;} 
-	}  
-	div {#StateAbbrev:before {
-		content: "Abbr";
-		visibility:visible
-		}
-	}
-	
-	div {#StateCapital{ visibility:hidden;} 
-	}  
-	div {#StateCapital:before {
-		content: "Capital";
-		visibility:visible
-		}
-	}
-	
-	div {#StatePopul{ visibility:hidden;} 
-	}  
-	div {#StatePopul:before {
-		content: "Pop";
-		visibility:visible
-		}
-	} 
-	
 	.ColHeading{
 		height:20px;
 		font-size:$tinyFont;
@@ -189,7 +188,7 @@ tr:nth-child(odd) {background: $colorRowOdd;}
 		}  
 		
 	.mainContainer{
-	padding: 0 20px;
+		padding: 0 20px;
 	}	
 		
 	.btnResponsive {
@@ -197,40 +196,7 @@ tr:nth-child(odd) {background: $colorRowOdd;}
 		background-color: teal;
 		margin:3px 20px;
 		width:100%;   
-	}
-
-	div {#StateName { visibility:hidden;} 
-	}  
-	div {#StateName:before {
-		content: "Name";
-		visibility:visible
-		}
-	}
-
-	div {#StateAbbrev{ visibility:hidden;} 
-	}  
-	div {#StateAbbrev:before {
-		content: "Abbr";
-		visibility:visible
-		}
-	}
-	
-	div {#StateCapital{ visibility:hidden;} 
-	}  
-	div {#StateCapital:before {
-		content: "Capital";
-		visibility:visible
-		}
-	}
-	
-	div {#StatePopul{ visibility:hidden;} 
-	}  
-	div {#StatePopul:before {
-		content: "Pop";
-		visibility:visible
-		}
-	}
-	
+	}	
 	.ColHeading{
 		height:20px;
 		font-size:$tinyFont;
@@ -270,3 +236,78 @@ tr:nth-child(odd) {background: $colorRowOdd;}
 		margin:0 20;  
 	}
 }
+
+
+/*Control the column headers
+<  575 Full Text
+>= 576 and < 890 abbreviation 
+>= 890 full text
+*/
+@media (max-width : 575px){
+
+	div {#StateName { visibility:hidden;} 
+	}  
+	div {#StateName:before {
+		content: "State Full Name";
+		visibility:visible;
+		padding-left:10px;
+		}
+	}
+
+	div {#StateAbbrev{ visibility:hidden;} 
+	}  
+	div {#StateAbbrev:before {
+		content: "State Abbreviation";
+		visibility:visible;
+		padding-left:10px;
+		}
+	}
+	
+	div {#StateCapital{ visibility:hidden;} 
+	}  
+	div {#StateCapital:before {
+		content: "State Capital";
+		visibility:visible;
+		padding-left:10px;
+		}
+	}
+	
+	div {#StatePopul{ visibility:hidden;} 
+	}  
+	div {#StatePopul:before {
+		content: "Population";
+		visibility:visible;
+		padding-left:10px;
+		}
+	} 	
+}
+
+@media screen and (min-width : 576px) and (max-width : 889px){
+
+  #StateName { visibility:hidden;}
+	#StateName::before {
+		content: "Name";
+		padding-left:5px;
+		visibility:visible;
+ }
+
+	#StateAbbrev{ visibility:hidden;}  
+	#StateAbbrev:before {
+		content: "Abbr";
+		visibility:visible;
+		}
+	
+	
+	#StateCapital{ visibility:hidden;}  
+	#StateCapital:before {
+		content: "Capital";
+		visibility:visible;
+		}
+	
+	#StatePopul{ visibility:hidden;}  
+	#StatePopul:before {
+		content: "Pop";
+		visibility:visible;
+		}
+
+}	

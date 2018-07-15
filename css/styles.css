@@ -12,6 +12,11 @@ p #addNote {
   color: blue;
 }
 
+p::selection {
+  color: red;
+  background-color: silver;
+}
+
 ul {
   font-size: 18px;
   color: blue;
@@ -33,6 +38,26 @@ ol ol ul {
   vertical-align: middle;
 }
 
+#lnkHome:hover {
+  background-color: lightgray;
+  color: black;
+}
+
+#lnkList:hover {
+  background-color: silver;
+  color: black;
+}
+
+#lnkTable:hover {
+  background-color: darkgray;
+  color: white;
+}
+
+#lnkGrid:hover {
+  background-color: gray;
+  color: white;
+}
+
 /* Mixin itself  */
 /* Usage as a mixin  */
 .clearAll::after {
@@ -41,7 +66,7 @@ ol ol ul {
   clear: both;
 }
 
-.btnRowRes, .btnRow, .mainContainer {
+.btnRowRes, .navItem, .btnRow, .mainContainer {
   margin: 0px 100px;
   padding: 5px;
   border-style: groove;
@@ -51,6 +76,15 @@ ol ol ul {
 
 .btnRow {
   border-color: green;
+}
+
+.navItem {
+  width: 100px;
+  display: inline-block;
+  margin: 5px 5px;
+  padding: 2px;
+  Text-align: center;
+  border-width: 1px;
 }
 
 div #cRight {
@@ -115,7 +149,7 @@ tr:nth-child(odd) {
   background-color: #C8C8CD;
 }
 
-@media screen and (max-width: 480px) {
+@media (max-width: 480px) {
   .btn {
     overflow: hidden;
     background-color: pink;
@@ -130,42 +164,39 @@ tr:nth-child(odd) {
     width: 100%;
   }
 
-  div #StateName {
-    visibility: hidden;
-  }
+  /*
+  	div {#StateName { visibility:hidden;} 
+  	}  
+  	div {#StateName:before {
+  		content: "State Full Name";
+  		visibility:visible
+  		}
+  	}
 
-  div #StateName:before {
-    content: "Name";
-    visibility: visible;
-  }
+  	div {#StateAbbrev{ visibility:hidden;} 
+  	}  
+  	div {#StateAbbrev:before {
+  		content: "State Abbreviation";
+  		visibility:visible
+  		}
+  	}
 
-  div #StateAbbrev {
-    visibility: hidden;
-  }
+  	div {#StateCapital{ visibility:hidden;} 
+  	}  
+  	div {#StateCapital:before {
+  		content: "State Capital";
+  		visibility:visible
+  		}
+  	}
 
-  div #StateAbbrev:before {
-    content: "Abbr";
-    visibility: visible;
-  }
-
-  div #StateCapital {
-    visibility: hidden;
-  }
-
-  div #StateCapital:before {
-    content: "Capital";
-    visibility: visible;
-  }
-
-  div #StatePopul {
-    visibility: hidden;
-  }
-
-  div #StatePopul:before {
-    content: "Pop";
-    visibility: visible;
-  }
-
+  	div {#StatePopul{ visibility:hidden;} 
+  	}  
+  	div {#StatePopul:before {
+  		content: "Population";
+  		visibility:visible
+  		}
+  	} 
+  */
   .ColHeading {
     height: 20px;
     font-size: 14px;
@@ -192,42 +223,32 @@ tr:nth-child(odd) {
     width: 100%;
   }
 
-  div #StateName {
-    visibility: hidden;
-  }
+  /*	
+    #StateName { visibility:hidden;}
+  	#StateName::before {
+  		content: "Name";
+  		visibility:visible
+   }
 
-  div #StateName:before {
-    content: "Name";
-    visibility: visible;
-  }
+  	#StateAbbrev{ visibility:hidden;}  
+  	#StateAbbrev:before {
+  		content: "Abbr";
+  		visibility:visible
+  		}
 
-  div #StateAbbrev {
-    visibility: hidden;
-  }
 
-  div #StateAbbrev:before {
-    content: "Abbr";
-    visibility: visible;
-  }
+  	#StateCapital{ visibility:hidden;}  
+  	#StateCapital:before {
+  		content: "Capital";
+  		visibility:visible
+  		}
 
-  div #StateCapital {
-    visibility: hidden;
-  }
-
-  div #StateCapital:before {
-    content: "Capital";
-    visibility: visible;
-  }
-
-  div #StatePopul {
-    visibility: hidden;
-  }
-
-  div #StatePopul:before {
-    content: "Pop";
-    visibility: visible;
-  }
-
+  	#StatePopul{ visibility:hidden;}  
+  	#StatePopul:before {
+  		content: "Pop";
+  		visibility:visible
+  		}
+  */
   .ColHeading {
     height: 20px;
     font-size: 14px;
@@ -265,6 +286,90 @@ tr:nth-child(odd) {
     background-color: silver;
     width: 125px;
     margin: 0 20;
+  }
+}
+/*Control the column headers
+<  575 Full Text
+>= 576 and < 890 abbreviation 
+>= 890 full text
+*/
+@media (max-width: 575px) {
+  div #StateName {
+    visibility: hidden;
+  }
+
+  div #StateName:before {
+    content: "State Full Name";
+    visibility: visible;
+    padding-left: 10px;
+  }
+
+  div #StateAbbrev {
+    visibility: hidden;
+  }
+
+  div #StateAbbrev:before {
+    content: "State Abbreviation";
+    visibility: visible;
+    padding-left: 10px;
+  }
+
+  div #StateCapital {
+    visibility: hidden;
+  }
+
+  div #StateCapital:before {
+    content: "State Capital";
+    visibility: visible;
+    padding-left: 10px;
+  }
+
+  div #StatePopul {
+    visibility: hidden;
+  }
+
+  div #StatePopul:before {
+    content: "Population";
+    visibility: visible;
+    padding-left: 10px;
+  }
+}
+@media screen and (min-width: 576px) and (max-width: 889px) {
+  #StateName {
+    visibility: hidden;
+  }
+
+  #StateName::before {
+    content: "Name";
+    padding-left: 5px;
+    visibility: visible;
+  }
+
+  #StateAbbrev {
+    visibility: hidden;
+  }
+
+  #StateAbbrev:before {
+    content: "Abbr";
+    visibility: visible;
+  }
+
+  #StateCapital {
+    visibility: hidden;
+  }
+
+  #StateCapital:before {
+    content: "Capital";
+    visibility: visible;
+  }
+
+  #StatePopul {
+    visibility: hidden;
+  }
+
+  #StatePopul:before {
+    content: "Pop";
+    visibility: visible;
   }
 }
 

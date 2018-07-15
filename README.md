@@ -3,7 +3,8 @@ CS50-W Project 0 created by Gloria Binette aka RedefinedVariable
 
 Website contains four .html pages and a custom stylesheet 
 	*index.html, p0-column.html, p0-lists.html, p0-table.html, styles.css
-	* Navigation is via buttons on all pages have bootstrap tooltips except p0-Lists which demonstrates the native tooltips
+	* Navigation is offered via 2 options per page. Buttons on all pages have bootstrap tooltips except p0-Lists which demonstrates the native tooltips
+	  - Nav element with a row of divs styled as button-esq use hrefs to navigate.        
 	* All pages have 
 		image in upper left
 		divs that draw upon SCSS inheritance using extend %containers-shared;... 
